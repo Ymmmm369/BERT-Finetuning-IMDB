@@ -43,14 +43,10 @@ BERT-Finetuning-IMDB/
 ├── notebooks/
 │ └── BERT_IMDB_Sentiment_Analysis.ipynb
 │
-├── src/
-│ ├── preprocess.py
-│ ├── train_bert.py
-│ ├── evaluate.py
-│
 ├── results/
-│ ├── metrics.txt
-│ ├── confusion_matrix.png
+│ ├── test-results.jpeg
+│ ├── confusion_matrix.jpeg
+| ├── metrics_summary.txt
 │
 ├── requirements.txt
 │
