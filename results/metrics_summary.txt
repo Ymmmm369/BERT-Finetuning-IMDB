@@ -1,0 +1,36 @@
+IMDB Sentiment Analysis - Metrics Summary
+=========================================
+
+1. Baseline Model (TF-IDF + Logistic Regression)
+------------------------------------------------
+- Accuracy: 0.88
+- Precision: ~0.88
+- Recall: ~0.88
+- F1-score: ~0.88
+
+Notes:
+The baseline model performs strongly on the full IMDB dataset, especially for clearly polarized reviews. It relies on TF-IDF features and a linear classifier.
+
+2. BERT Model (bert-base-uncased, reduced subset)
+-------------------------------------------------
+Training configuration:
+- Train / Val / Test sizes: 800 / 200 / 400
+- Max sequence length: 64
+- Epochs: 1
+- Batch size: 4
+- Hardware: CPU-only
+
+Test Results:
+- Accuracy: 0.815
+- Precision: 0.825
+- Recall: 0.809
+- F1-score: 0.817
+
+Notes:
+Due to limited compute, BERT was fine-tuned on a substantially smaller dataset. Despite this, the performance is competitive with the baseline and shows strong contextual understanding.
+
+3. Summary
+----------
+- Logistic Regression baseline = higher accuracy on full data (0.88)
+- BERT (small subset) = strong contextual performance but limited by training size and hardware
+- With full dataset + GPU, BERT would likely surpass the baseline significantly
